@@ -1,0 +1,12 @@
+diff -Nuar a/lib/dpkg/compress.c b/lib/dpkg/compress.c
+--- a/lib/dpkg/compress.c	2014-03-07 12:33:07.635960666 +0100
++++ b/lib/dpkg/compress.c	2014-03-10 13:31:30.187059379 +0100
+@@ -188,7 +188,7 @@
+ 	int strategy;
+ 	int z_errnum;
+ 	gzFile gzfile;
+-
++	ohshit(_("%s: COMPRESSOR STRATEGY: %d"), desc, strategy);
+ 	if (params->strategy == compressor_strategy_filtered)
+ 		strategy = 'f';
+ 	else if (params->strategy == compressor_strategy_huffman)
